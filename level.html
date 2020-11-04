@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      * {box-sizing: border-box}
+      body {font-family:Sans-serif; margin:0}
+
+      .slideshow-container {
+        position: relative;
+        background: #f1f1f1f1;
+      }
+
+      .mySlides {
+        display: none;
+        padding: 80px;
+        text-align: center;
+        
+      }
+
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -30px;
+        padding: 16px;
+        color: #888;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      .next {
+        position: absolute;
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      .prev:hover, .next:hover {
+        background-color:darkblue;
+        color: #ffcc00;
+        size:10px;
+      }
+
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #ffcc00;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .dot-container {
+        text-align: center;
+        padding: 20px;
+        background: darkblue;
+      }
+
+
+
+      .active, .dot:hover {
+        background-color: #717171;
+      }
+
+      q {font-style: italic;}
+
+      .number {
+          color: #ffcc00;
+          font-size:50px;
+        }
+     .HOme{
+        font-family:Comic Sans MS, Comic Sans, cursive	;
+         font-size:30px;
+         color:white;
+         border-radius:20px;
+    padding:5px;
+    margin:10px 0;
+    width:90%;
+    border: 0px solid #999;
+    outline:none;
+    background:darkblue;
+     }
+     .HOme:hover{
+         width:20px;
+    background-color:#ffcc00;
+    color: white;
+    border-radius:20px;
+
+     }
+     .rules{
+        font-family:Comic Sans MS, Comic Sans, cursive	;
+         font-size:30px;
+        color:white;
+         border-radius:20px;
+    padding:5px;
+    margin:10px 0;
+    width:90%;
+    border: 0px solid #999;
+    outline:none;
+    background:darkblue;
+     }
+     .Rewards{
+        font-family:Comic Sans MS, Comic Sans, cursive	;
+         font-size:30px;
+        color:white;
+         border-radius:20px;
+    padding:5px;
+    margin:10px 0;
+    width:90%;
+    border: 0px solid #999;
+    outline:none;
+    background:darkblue;
+     }
+     .courses{
+        font-family:Comic Sans MS, Comic Sans, cursive	;
+         font-size:30px;
+        color:white;
+         border-radius:20px;
+    padding:5px;
+    margin:10px 0;
+    width:90%;
+    border: 0px solid #999;
+    outline:none;
+    background:darkblue;
+     }
+     p{
+         font-family:Comic Sans MS, Comic Sans, cursive	;
+       
+     }
+    </style>
+  </head>
+  <body>
+      
+    
+          <a class="HOme" href="file:///F:/Adams/CodingProjects/Html_Games/patriotPlay.html"><i class="fa fa-fw fa-level-up"></i> Home</a>
+
+    <div class="slideshow-container">
+
+      <div class="mySlides">
+        <h class="rules">Rules</h>
+        <p><br>To ensure that the logging prevents cheating, each parent will receive a code they are not to tell to their children. The log will only be counted if the code is present.
+          <br>At the end of each week, you may submit how many minutes of exercise you acquired this week. It will be divided by 7 and each time this quotient advances by 20 minutes, you will gain a new title.
+          <br>At the beginning of this app, you will be offered a choice of courses. Choose the sport you want to play. EVERY MINUTE OF THIS SPORT WILL BE DOUBLED.
+          <br>Exercise can be traded in for one of the prizes listed below.
+          e</p>
+        <p class="number"> 1</p>
+      </div>
+
+      <div class="mySlides">
+        <h class="Rewards">Rewards</h>
+        <p>
+          <br>20 mins no ads for a day 
+          <br>40mins no ads for a week 
+          <br>75 mins free trial for a program we make
+          <br>105 mins ice cream
+          <br>125 mins a restaurant gift card                  
+          <br>150 mins secret levels 
+          <br>200 mins free video game that breaks over time 
+          <br>680 mins in 1 day  a  almost free console that breaks over time
+          <br>1000 mins iphone 4 
+        </p>
+        <p class="number"> 2</p>
+      </div>
+
+      <div class="mySlides">
+        <h class="courses">Courses</h>
+        <p>Softball/Baseball, Basketball, Swimming, Horseback Riding, Football, Soccer, Track, Field, Volleyball
+        </p>
+        <p class="number"> 3</p>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+    </script>
+
+  </body>
+</html> 
+<script type="application/javascript" src="/share.js"></script>
